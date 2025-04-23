@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ProductComponent } from './components/product/product.component';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { SendTextComponent } from './components/send-text/send-text.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent,
+    ParentComponent,
+    ChildComponent,
+    SendTextComponent,
+    ProductlistComponent
   ],
   imports: [
     BrowserModule,

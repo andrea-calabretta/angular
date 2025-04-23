@@ -1,0 +1,18 @@
+<!-- <app-child [user] = "utente" ></app-child> -->
+<!-- <app-child (purchase)="handlePurchase()"></app-child> -->
+<!-- <app-send-text (inviaMessaggio)="aggiungiMsg($event)"></app-send-text>
+
+<div *ngFor="let msg of messaggi">
+  <p>{{ msg }}</p>
+</div> -->
+
+
+<app-productlist
+  [products] ="products"
+  (aggiunto)="aggiungiAlCarrello($event)">
+</app-productlist>
+
+<h3>Carrello:</h3>
+<ul>
+  <li *ngFor="let p of carrello">{{ p.name }}</li>
+</ul>
