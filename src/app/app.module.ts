@@ -11,6 +11,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { SendTextComponent } from './components/send-text/send-text.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
+import { ReceiveParamsComponent } from './components/receive-params/receive-params.component';
 
 
 
@@ -22,7 +23,9 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
     ParentComponent,
     ChildComponent,
     SendTextComponent,
-    ProductlistComponent
+    ProductlistComponent,
+    ReceiveParamsComponent,
+
   ],
   imports: [
     BrowserModule,
