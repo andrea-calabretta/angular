@@ -1,0 +1,19 @@
+<h2>Reactive Form con Validazioni Personalizzate</h2>
+
+<input
+  type="email"
+  [formControl]="emailControl"
+  placeholder="Inserisci email"
+  class="campo-lungo"
+/>
+
+<div *ngIf="emailControl.invalid && emailControl.touched" class="errore">
+  <p *ngIf="emailControl.errors?.['required']">L'email è obbligatoria.</p>
+  <p *ngIf="emailControl.errors?.['email']">Formato email non valido.</p>
+  <p *ngIf="emailControl.errors?.['gmail']">L'email deve terminare con &#64;gmail.com.</p>
+  <p *ngIf="emailControl.errors?.['onlyLetters']">
+    La parte prima di &#64; deve contenere solo lettere.
+  </p>
+</div>
+
+<p>Email inserita: {{ emailControl.value }}</p>

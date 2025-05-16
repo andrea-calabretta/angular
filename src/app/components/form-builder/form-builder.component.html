@@ -1,0 +1,25 @@
+<h2>Form con FormBuilder</h2>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <label>
+        Nome:
+        <input formControlName="nome" />
+      </label>
+      <div *ngIf="nome.invalid && nome.touched">Il nome è obbligatorio.</div>
+
+      <label>
+        Email:
+        <input formControlName="email" />
+      </label>
+      <div *ngIf="email.invalid && email.touched">Email non valida.</div>
+
+      <label>
+        Password:
+        <input type="password" formControlName="password" />
+      </label>
+      <div *ngIf="password.invalid && password.touched">Min 6 caratteri.</div>
+
+      <button type="submit" [disabled]="userForm.invalid">Invia</button>
+    </form>
+
+    <pre>{{ userForm.value | json }}</pre>

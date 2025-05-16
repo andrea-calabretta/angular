@@ -1,0 +1,45 @@
+
+    <h2>Registrazione utente</h2>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <label>
+        Nome:
+        <input type="text" formControlName="nome" />
+      </label>
+      <div *ngIf="nome.invalid && nome.touched" class="errore">
+        Il nome è obbligatorio.
+      </div>
+
+      <label>
+        Email:
+        <input type="email" formControlName="email" />
+      </label>
+      <div *ngIf="email.invalid && email.touched" class="errore">
+        Inserisci un'email valida.
+      </div>
+
+      <label>
+        Password:
+        <input type="password" formControlName="password" />
+      </label>
+      <div *ngIf="password.invalid && password.touched" class="errore">
+        <ng-container *ngIf="password.errors?.['required']">
+          La password è obbligatoria.
+        </ng-container>
+        <ng-container *ngIf="password.errors?.['minlength']">
+          Minimo 6 caratteri richiesti.
+        </ng-container>
+      </div>
+
+      <label>
+        Conferma Password:
+        <input type="password" formControlName="confirmPassword" />
+      </label>
+      <div *ngIf="confirmPassword.touched && registrationForm.errors?.['passwordMismatch']" class="errore">
+        Le password non coincidono.
+      </div>
+
+      <button type="submit" [disabled]="registrationForm.invalid">Registrati</button>
+    </form>
+
+    <p *ngIf="submitted">Registrazione completata per {{ registrationForm.value.nome }}!</p>

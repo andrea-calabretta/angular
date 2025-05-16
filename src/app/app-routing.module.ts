@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './auth/auth.guard';
 import { ReceiveParamsComponent } from './components/receive-params/receive-params.component';
+import { FormBasicComponent } from './components/form-basic/form-basic.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   // { path: 'receive/:id', component: ReceiveParamsComponent }, //params
   { path: 'receive', component: ReceiveParamsComponent }, //queryParams
+  { path: 'form', component: FormBasicComponent },
 ];
 
 @NgModule({

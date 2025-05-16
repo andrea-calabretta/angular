@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductComponent } from './components/product/product.component';
@@ -12,6 +12,13 @@ import { ChildComponent } from './components/child/child.component';
 import { SendTextComponent } from './components/send-text/send-text.component';
 import { ProductlistComponent } from './components/productlist/productlist.component';
 import { ReceiveParamsComponent } from './components/receive-params/receive-params.component';
+import { FormBasicComponent } from './components/form-basic/form-basic.component';
+import { FormValidatorsComponent } from './components/form-validators/form-validators.component';
+import { FormValidatorsEmailComponent } from './components/form-validators-email/form-validators-email.component';
+import { FormValidatorsCustomComponent } from './components/form-validators-custom/form-validators-custom.component';
+import { FromGroupComponent } from './components/from-group/from-group.component';
+import { FormArrayComponent } from './components/form-array/form-array.component';
+import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 
 
 
@@ -25,13 +32,21 @@ import { ReceiveParamsComponent } from './components/receive-params/receive-para
     SendTextComponent,
     ProductlistComponent,
     ReceiveParamsComponent,
+    FormBasicComponent,
+    FormValidatorsComponent,
+    FormValidatorsEmailComponent,
+    FormValidatorsCustomComponent,
+    FromGroupComponent,
+    FormArrayComponent,
+    FormBuilderComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DashboardComponent
+    DashboardComponent,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

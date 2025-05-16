@@ -1,0 +1,15 @@
+    <h2>Inserisci i tuoi interessi</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div formArrayName="hobbies">
+        <div *ngFor="let hobby of hobbies.controls; let i = index">
+          <input [formControlName]="i" placeholder="Hobby #{{ i + 1 }}" />
+          <button type="button" (click)="removeHobby(i)">Rimuovi</button>
+        </div>
+      </div>
+
+      <button type="button" (click)="addHobby()">Aggiungi Hobby</button>
+      <button type="submit" [disabled]="form.invalid">Invia</button>
+    </form>
+
+    <pre>{{ form.value | json }}</pre>
