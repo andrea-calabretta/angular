@@ -10,6 +10,14 @@
 
 <!-- <app-from-group/> -->
 
-<app-form-array/>
+<!-- <app-form-array/> -->
 
 <!-- <app-form-builder/> -->
+
+<app-lifecycle *ngIf="show"
+  [titolo]="'Lifecycle'"
+/>
+
+<button
+  (click)="toggle()">Mostra/Nascondi componente>
+</button>

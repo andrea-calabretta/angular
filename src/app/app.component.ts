@@ -9,5 +9,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'intro_ng_module';
 
+  show = true;
+
+  toggle() {
+    this.show = !this.show;
+  }
+
 
 }
