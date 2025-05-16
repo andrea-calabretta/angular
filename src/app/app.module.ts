@@ -20,6 +20,7 @@ import { FromGroupComponent } from './components/from-group/from-group.component
 import { FormArrayComponent } from './components/form-array/form-array.component';
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ViewchildComponent } from './components/viewchild/viewchild.component';
 
 
 
@@ -41,7 +42,7 @@ import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
     FormArrayComponent,
     FormBuilderComponent,
     LifecycleComponent,
-
+    ViewchildComponent
   ],
   imports: [
     BrowserModule,

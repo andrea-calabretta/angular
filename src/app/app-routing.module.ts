@@ -6,6 +6,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ReceiveParamsComponent } from './components/receive-params/receive-params.component';
 import { FormBasicComponent } from './components/form-basic/form-basic.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
+import { ViewchildComponent } from './components/viewchild/viewchild.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'receive', component: ReceiveParamsComponent }, //queryParams
   { path: 'form', component: FormBasicComponent },
   { path: 'lifecycle', component: LifecycleComponent},
+  { path: 'viewchild', component: ViewchildComponent},
 ];
 
 @NgModule({
