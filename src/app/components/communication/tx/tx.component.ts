@@ -21,4 +21,8 @@ export class TxComponent {
   clearChannel = () => {
     this._msgService.clearChannel();
   }
+
+  completeChannel = () => {
+    this._msgService.endCommunication();
+  }
 }

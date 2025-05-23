@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { AsyncSubject, BehaviorSubject, ReplaySubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessageService {
   // private messageSource = new Subject<string>();
-  private messageSource = new BehaviorSubject<string>('');
+  // private messageSource = new BehaviorSubject<string>('');
+  // private messageSource = new AsyncSubject<string>();
+  private messageSource = new ReplaySubject<string>();
 
     currentMessage = this.messageSource.asObservable();// asObservable is used to expose the Subject as an Observable
   // This allows other components to subscribe to the Subject without being able to emit values themselves
@@ -19,4 +21,8 @@ export class MessageService {
 
   clearChannel = () =>
       this.messageSource.next('clear');
+
+  endCommunication = () =>
+      this.messageSource.complete();
+
 }
