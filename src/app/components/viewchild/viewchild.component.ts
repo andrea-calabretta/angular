@@ -7,7 +7,7 @@ import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@ang
   styleUrl: './viewchild.component.scss'
 })
 export class ViewchildComponent implements AfterViewInit, OnDestroy{
-   @ViewChild('autoButton') buttonRef!: ElementRef<HTMLButtonElement>;
+  @ViewChild('autoButton') buttonRef!: ElementRef<HTMLButtonElement>;
   clickCount = 0;
   private intervalId: any;
 
