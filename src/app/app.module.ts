@@ -21,6 +21,10 @@ import { FormArrayComponent } from './components/form-array/form-array.component
 import { FormBuilderComponent } from './components/form-builder/form-builder.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { ViewchildComponent } from './components/viewchild/viewchild.component';
+import { TxComponent } from './components/communication/tx/tx.component';
+import { RxComponent } from './components/communication/rx/rx.component';
+import { Rx2Component } from './components/communication/rx2/rx2.component';
+import { CommunicationComponent } from './components/communication/communication/communication.component';
 
 
 
@@ -42,7 +46,11 @@ import { ViewchildComponent } from './components/viewchild/viewchild.component';
     FormArrayComponent,
     FormBuilderComponent,
     LifecycleComponent,
-    ViewchildComponent
+    ViewchildComponent,
+    TxComponent,
+    RxComponent,
+    Rx2Component,
+    CommunicationComponent
   ],
   imports: [
     BrowserModule,

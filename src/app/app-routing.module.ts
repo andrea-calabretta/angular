@@ -7,6 +7,7 @@ import { ReceiveParamsComponent } from './components/receive-params/receive-para
 import { FormBasicComponent } from './components/form-basic/form-basic.component';
 import { LifecycleComponent } from './components/lifecycle/lifecycle.component';
 import { ViewchildComponent } from './components/viewchild/viewchild.component';
+import { CommunicationComponent } from './components/communication/communication/communication.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'form', component: FormBasicComponent },
   { path: 'lifecycle', component: LifecycleComponent},
   { path: 'viewchild', component: ViewchildComponent},
+  { path: 'communication', component: CommunicationComponent},
 ];
 
 @NgModule({
